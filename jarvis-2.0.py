@@ -114,7 +114,7 @@ def searchgoogle():
     wb.open('https://www.google.com/search?q='+search)
 
 def news():
-    newsapi=NewsApiClient(api_key="bfb3a28daf6443e5a3be9dd315d118bb")
+    newsapi=NewsApiClient(api_key="")
     speak("Topic of the news Sir ")
     topic=takeCommandMic()
     data = newsapi.get_top_headlines(q=topic,
@@ -217,7 +217,7 @@ if __name__ == "__main__":
 
             elif "weather" in query:
 
-                url ="http://api.openweathermap.org/data/2.5/weather?q=sriperumbudur&units=imperial&appid=3a6f8ab0baa30a8b0daeee22bf8fc927"
+                url =""
 
                 res=requests.get(url)
                 data=res.json()
