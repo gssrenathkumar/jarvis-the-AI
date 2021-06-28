@@ -144,9 +144,9 @@ def takeCommandMic():
 def sendEmail(receiver,subject,content):
     server = smtplib.SMTP('smtp.gmail.com', 587)
     server.starttls()
-    server.login("jarvisai215@gmail.com", "srenath2002")
+    server.login("YOUR EMAIL ID", "PASSWORD")
     email=EmailMessage()
-    email["From"]="jarvisai215@gmail.com"
+    email["From"]="FROM EMAIL ID"
     email["To"]=receiver
     email["Subject"]=subject
     email.set_content(content)
@@ -177,7 +177,7 @@ def searchgoogle():
 
 
 def news():
-            newsapi=NewsApiClient(api_key="bfb3a28daf6443e5a3be9dd315d118bb")
+            newsapi=NewsApiClient(api_key="YOUR API KEY")
             speak("Topic of the news Sir ")
             topic=takeCommandMic()
             data = newsapi.get_top_headlines(q=topic,
@@ -203,7 +203,7 @@ def text2speech():
 
 def screenshot():
     name_img = tt.time()
-    name_img = "C:\\Users\\srena\\OneDrive\\Pictures\\Screenshots\\{}.png".format(name_img)
+    name_img = "FILE LOCATION".format(name_img)
     img =pyautogui.screenshot(name_img)
     speak("Screenshot taken successfully")
     img.show()
@@ -266,21 +266,14 @@ if __name__ == "__main__":
             wishme2()
 
         elif there_exists(["personal","personal gmail"]):
-            mail=random.randint(0,20)
-            speak(f"You have {mail} mails unread")
             wb.open("https://mail.google.com/mail/u/0/#inbox")
             
         
-        elif there_exists(["college","college gmail"]):
-            mails=random.randint(0,10)
-            speak(f"You have {mails} mails unread")
-            wb.open("https://mail.google.com/mail/u/2/#inbox")
+      
             
         
         elif there_exists(["instagram","status of my instagram page"]):
-            posts=random.randint(0,45)
-            status=random.randint(0,100)
-            speak(f"You you have totally {posts} unread posts and {status} unread status")
+           
             wb.open("https://www.instagram.com/")
             
 
@@ -288,9 +281,7 @@ if __name__ == "__main__":
 
         elif there_exists(["email"]):
             email_list={
-                'college':"srenath.e0120006@sret.edu.in",
-                "personal":"srenathindustries215@gmail.com",
-                "mobile":"srenathindustries2020@gmail.com"
+                "LIST1":"YOUR MAIL ID"
 
             }
             try:
@@ -320,9 +311,7 @@ if __name__ == "__main__":
         elif there_exists(["message"]):
             
             user_name={
-                'mother':'+918870929498',
-                "sister":"+919944005469",
-                "father":"+919894186228"
+                "PHONE NUMBER":"NUMBER"
             }
             try:
                 speak("To whom you want to send the whats app message")
@@ -359,9 +348,7 @@ if __name__ == "__main__":
             wb.open('https://www.linkedin.com/feed/')
             
         
-        elif there_exists(["stamp paper","paper","stamp","government","tnreginet","best","temple"]):
-            speak("ok sir")
-            wb.open('https://tnreginet.gov.in/portal/')
+        
             
 
         elif there_exists(["youtube"]):
@@ -382,22 +369,16 @@ if __name__ == "__main__":
             speak("I was created by Srenath Kumar")
             speak("My Founder is just a first year student of Sri Ramachandra Institute of Higher Education and Research")
         
-        elif there_exists(["Tell me about your self","self","about"]):
-            speak("Let me explain about Myself")
-            playsound.playsound('D:\\Learning\\Project Innovative Ideas\\Software Projects\\Completed\\Jarvis-Friday Personal Assistant\\Jarvis-Friday Source Code\\jarvis_about.mp3')
+      
         
-        elif there_exists(["udemy","open udemy"]):
-            speak("ok sir")
-            wb.open("https://www.udemy.com/")
+       
             
         
-        elif there_exists(["classroom","class",'room']):
-            speak("ok sir")
-            wb.open("https://classroom.google.com/u/2/h")
+  
             
         
         elif there_exists(["switch to edit mode","mode","hardware mode"]):
-            codepath="D:\\Learning\\Project Innovative Ideas\\Software Projects\\Completed\\Jarvis-Friday Personal Assistant\\Jarvis-Friday Source Code\\Jarvis_4.0.py"
+            codepath="PATH FILE"
             
             speak("Please wait a While")
             sleep(3)   
@@ -411,7 +392,7 @@ if __name__ == "__main__":
         elif there_exists(["weather","temperature","temp"]):
 
             if there_exists1(["sriperumbudur","home"]):
-                url="http://api.openweathermap.org/data/2.5/weather?q=sriperumbudur&units=imperial&appid=3a6f8ab0baa30a8b0daeee22bf8fc927"
+                url="API URL"
 
                 res=requests.get(url)
                 data=res.json()
@@ -456,35 +437,9 @@ if __name__ == "__main__":
         elif there_exists(["visual studio","visual","studio","vs code","vs","code"]):
             print("Opened")
             speak("Ok Sir")
-            codepath="C:\\Users\\srena\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe"
+            codepath="FILE PATH"
             os.startfile(codepath)
-            
-        elif there_exists(["anaconda","lab","prompt","lock"]):
-            speak("Ok Sir")
-            codepath="C:\\Users\\srena\\anaconda3\\pythonw.exe"
-            codepath1="C:\\Users\\srena\\anaconda3\\cwp.py"
-            codepath2="C:\\Users\\srena\\anaconda3"
-            codepath3="C:\\Users\\srena\\anaconda3\\pythonw.exe"
-            codepath4="C:\\Users\\srena\\anaconda3\\Scripts\\anaconda-navigator-script.py"
-            
-            os.startfile(codepath3)
-            
-            
-                
-
-
-        elif there_exists(["learning"]):
-            print("opened")
-            speak("Ok Sir")
-            codepath1="D:\Learning"
-            os.startfile(codepath1)
            
-        
-        elif there_exists(["timetable","table","syllabus"]):
-            print("opened")
-            speak("Time Table Opened Successfully")
-            codepath1="C:\\Users\\srena\\AppData\\Local\\Programs\\taskade\\Taskade.exe"
-            os.startfile(codepath1)
             
 
         elif there_exists(["joke","jokes"]):
@@ -498,12 +453,12 @@ if __name__ == "__main__":
             speak("What should i Remember Sir")
             data=takeCommandMic()
             speak("You said me to remember that"+data)
-            remember=open("D:\\\Learning\\data.txt",'a')
+            remember=open("FILE PATH",'a')
             remember.write(data)
             remember.close()
 
         elif there_exists(["do you know anything","know","anything"]):
-            remember=open("D:\\Learning\\data.txt","r")
+            remember=open("FILE PATH","r")
             speak("You told me to remember that" + remember.read())
 
         elif there_exists(["flip"]):
@@ -517,7 +472,7 @@ if __name__ == "__main__":
         elif there_exists(["take some notes","notes"]):
             speak("Sir What should i note down")
             notes=takeCommandMic()
-            file=open('D:\\Jarvis Access File\\notes.txt',"a")
+            file=open('FILE PATH',"a")
             speak("Sir should I need to inclue data and Time")
             ans=takeCommandMic()
             if there_exists(["yes","sure"]):
