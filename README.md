@@ -48,7 +48,8 @@
 
 <h2>Demonstration</h2>
 
-<p>You can watch a video demonstration of the virtual personal assistant in action at the following location: <code>demo_video.mp4</code></p>
+<p>You can watch a video demonstration of the virtual personal assistant in action at the following location: <code>https://user-images.githubusercontent.com/70089532/232516115-38fe5a5e-ae94-48f5-84b3-4fda463b036c.mp4</code></p>
+
 
 <h2>Conclusion</h2>
 
